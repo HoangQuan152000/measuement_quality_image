@@ -106,10 +106,7 @@
       <AdditionalLibraryDirectories>$(ProjectDir)external\OpenCV\4.8.0\lib;$(ProjectDir)external\XavisTech\$(Platform)\$(Configuration);$(SolutionDir)external\zlib\lib\$(Platform)\$(Configuration);$(SolutionDir)external\mxml\lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)external\OpenCV\4.8.0\dll\opencv_world480d.dll" "$(OutDir)"
-copy "$(SolutionDir)external\XavisTech\$(Platform)\$(Configuration)\*.dll"  "$(OutDir)"
-copy "$(SolutionDir)external\zlib\lib\$(Platform)\$(Configuration)\*.dll" "$(OutDir)"
-copy "$(SolutionDir)external\mxml\lib\$(Platform)\$(Configuration)\*.dll" "$(OutDir)"</Command>
+      <Command>copy /Y "$(ProjectDir)external\OpenCV\4.8.0\lib\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -141,10 +138,7 @@ copy "$(SolutionDir)external\mxml\lib\$(Platform)\$(Configuration)\*.dll" "$(Out
       <AdditionalLibraryDirectories>$(ProjectDir)external\OpenCV\4.8.0\lib;$(ProjectDir)external\XavisTech\$(Platform)\$(Configuration);$(SolutionDir)external\zlib\lib\$(Platform)\$(Configuration);$(SolutionDir)external\mxml\lib\$(Platform)\$(Configuration)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)external\OpenCV\4.8.0\dll\opencv_world480.dll" "$(OutDir)"
-copy "$(SolutionDir)external\XavisTech\$(Platform)\$(Configuration)\*.dll"  "$(OutDir)"
-copy "$(SolutionDir)external\zlib\lib\$(Platform)\$(Configuration)\*.dll" "$(OutDir)"
-copy "$(SolutionDir)external\mxml\lib\$(Platform)\$(Configuration)\*.dll" "$(OutDir)"</Command>
+      <Command>copy /Y "$(ProjectDir)external\OpenCV\4.8.0\lib\*.dll" "$(OutDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
